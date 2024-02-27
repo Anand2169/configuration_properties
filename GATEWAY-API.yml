@@ -14,5 +14,3 @@ spring:
         uri: lb://GREET-API
         predicates:
         - Path=/greet
-  main:
-    web-application-type: reactive
