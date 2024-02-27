@@ -16,6 +16,3 @@ spring:
         - Path=/greet
 #  main:
 #    web-application-type: reactive
-
-    config:
-      enabled: false
