@@ -8,7 +8,7 @@ eureka:
     register-with-eureka: false  # Eureka server doesn't register itself
     fetch-registry: false        # Eureka server doesn't fetch the registry
   server:
-    enable-self-preservation: false  # Optional: Disables self-preservation mode for development (not recommended for production)
+    enable-self-preservation: true  # Optional: Disables self-preservation mode for development (not recommended for production)
 
 spring:
   application:
