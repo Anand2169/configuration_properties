@@ -41,6 +41,3 @@ spring:
               allowedOrigins: '*'
               allowedHeaders: '*'
               maxAge: 30
-
-  main:
-    web-application-type: reactive
