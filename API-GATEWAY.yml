@@ -6,11 +6,41 @@ spring:
           enabled: true
           lower-case-service-id: true
       routes:
-      - id: one     
-        uri: lb://WELCOME-API
-        predicates:
-        - Path=/welcome
-      - id: two
-        uri: lb://GREET-API
-        predicates:
-        - Path=/greet
+        - id: welcome-api
+          uri: lb://WELCOME-API
+          predicates:
+            - Path=/welcome
+          filters:
+            - JwtAuthenticationFilter
+          metadata:
+            cors:
+              allowedOrigins: '*'
+              allowedHeaders: '*'
+              maxAge: 30
+
+        - id: greet-api
+          uri: lb://GREET-API
+          predicates:
+            - Path=/greet
+          filters:
+            - name: JwtAuthenticationFilter
+          metadata:
+            cors:
+              allowedOrigins: '*'
+              allowedHeaders: '*'
+              maxAge: 30
+
+        - id: authentication-api
+          uri: lb://IDENTITY-SERVICE
+          predicates:
+            - Path=/api/user/**
+          filters:
+            - JwtAuthenticationFilter
+          metadata:
+            cors:
+              allowedOrigins: '*'
+              allowedHeaders: '*'
+              maxAge: 30
+
+  main:
+    web-application-type: reactive
