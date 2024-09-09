@@ -13,9 +13,9 @@ eureka:
 spring:
   application:
     name: EUREKA-SERVER  # Name of the Eureka server application
-  cloud:
-   config:
-    enabled: false
+  # cloud:
+  #  config:
+  #   enabled: false
 
 management:
   endpoints:
