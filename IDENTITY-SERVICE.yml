@@ -18,8 +18,6 @@ spring:
   app:
     jwtSecretKey: eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9eyJzdWIiOiJzaXJpIiwibmFtZSI6Im1hbGxpIiwiaWF0IjoxNTE2MjM5MDIyfQ8jFhj-d5J2hWOUm76Wf0M6sp1OFattmR68DO8vbkrDth0qPmkTTOtaEtuCvv7cgQ-VUGbBjAilxALFP5rzjt4w
     jwtExpirationMs: 60000
-  application:
-    name: IDENTITY-SERVICE
 boot: 
   admin:
     client:
