@@ -21,17 +21,20 @@ boot:
   admin:
     client:
       url: http://localhost:1111/
-
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:8761/eureka/
-
+      
+# Eureka server not run 8761 port then using below property to register APIs, Otherwise not declare
+# Below Property is Optional
+# eureka:
+#   client:
+#     service-url:
+#       defaultZone: http://localhost:8761/eureka/
+# Actuator All EndPoint
 management:
   endpoints:
     web:
       exposure:
         include: '*'
+
 
 logging:
   level:
