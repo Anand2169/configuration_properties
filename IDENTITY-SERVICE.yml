@@ -1,6 +1,6 @@
 server:
- port: 8080
- 
+  port: 8080
+
 spring:
   security:
     user:
@@ -18,18 +18,19 @@ spring:
   app:
     jwtSecretKey: eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9eyJzdWIiOiJzaXJpIiwibmFtZSI6Im1hbGxpIiwiaWF0IjoxNTE2MjM5MDIyfQ8jFhj-d5J2hWOUm76Wf0M6sp1OFattmR68DO8vbkrDth0qPmkTTOtaEtuCvv7cgQ-VUGbBjAilxALFP5rzjt4w
     jwtExpirationMs: 60000
-   boot: 
-     admin:
+  boot:
+    admin:
       client:
         url: http://localhost:1111/
-      
-# Eureka server not run 8761 port then using below property to register APIs, Otherwise not declare
-# Below Property is Optional
+
+# Eureka server not running on port 8761, use below property to register APIs, otherwise not declare.
+# The below property is optional
 # eureka:
 #   client:
 #     service-url:
 #       defaultZone: http://localhost:8761/eureka/
-# Actuator All EndPoint
+
+# Actuator All Endpoints
 management:
   endpoints:
     web:
