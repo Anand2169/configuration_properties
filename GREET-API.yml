@@ -11,10 +11,10 @@ spring:
         url: http://localhost:1111/
 # Eureka server not run 8761 port then using below property to register APIs, Otherwise not declare
 # Below Property is Optional
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:8761/eureka/
+# eureka:
+#   client:
+#     service-url:
+#       defaultZone: http://localhost:8761/eureka/
 # Actuator All EndPoint
 management:
   endpoints:
