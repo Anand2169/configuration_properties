@@ -2,9 +2,7 @@ server:
   port: 8081
   
 spring:
-  application:
-    name: WELCOME-API
-# Admin client
+  # Admin client
   boot: 
     admin:
       client:
