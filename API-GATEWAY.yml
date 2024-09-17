@@ -10,8 +10,8 @@ spring:
           uri: lb://WELCOME-API
           predicates:
             - Path=/welcome
-          # filters:
-          #   - JwtAuthenticationFilter
+          filters:
+            - JwtAuthenticationFilter
           metadata:
             cors:
               allowedOrigins: '*'
@@ -22,8 +22,8 @@ spring:
           uri: lb://GREET-API
           predicates:
             - Path=/greet
-          # filters:
-          #   - name: JwtAuthenticationFilter
+          filters:
+            - name: JwtAuthenticationFilter
           metadata:
             cors:
               allowedOrigins: '*'
@@ -34,8 +34,8 @@ spring:
           uri: lb://IDENTITY-SERVICE
           predicates:
             - Path=/api/user/**
-          # filters:
-          #   - JwtAuthenticationFilter
+          filters:
+            - JwtAuthenticationFilter
           metadata:
             cors:
               allowedOrigins: '*'
