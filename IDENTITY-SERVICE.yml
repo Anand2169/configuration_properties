@@ -23,8 +23,7 @@ spring:
       client:
         url: http://localhost:1111/
 
-# Eureka server not running on port 8761, use below property to register APIs, otherwise not declare.
-# The below property is optional
+# Eureka server configuration (uncomment and update if using Eureka)
 # eureka:
 #   client:
 #     service-url:
@@ -39,11 +38,6 @@ management:
 
 logging:
   level:
-    org:
-      springframework:
-        security: DEBUG
-      hibernate:
-        sql: DEBUG
-    com:
-      example:
-        securitydemo: DEBUG
+    org.springframework.security: DEBUG
+    hibernate.sql: DEBUG
+    com.example.securitydemo: DEBUG
