@@ -6,30 +6,38 @@ spring:
     user:
       name: admin
       password: admin
+
+  redis:
+    host: localhost
+    port: 6379
+    timeout: 60000
+    # Uncomment and provide the password if Redis requires authentication
+    # password: your_password
+
+  cache:
+    redis:
+      time-to-live: 3600 # TTL in seconds
+
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/bigil
     username: root
     password: 142169
+
   jpa:
     hibernate:
       ddl-auto: update
     show-sql: true
+
   app:
     jwtSecretKey: eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9eyJzdWIiOiJzaXJpIiwibmFtZSI6Im1hbGxpIiwiaWF0IjoxNTE2MjM5MDIyfQ8jFhj-d5J2hWOUm76Wf0M6sp1OFattmR68DO8vbkrDth0qPmkTTOtaEtuCvv7cgQ-VUGbBjAilxALFP5rzjt4w
     jwtExpirationMs: 60000
+
   boot:
     admin:
       client:
         url: http://localhost:1111/
 
-# Eureka server configuration (uncomment and update if using Eureka)
-# eureka:
-#   client:
-#     service-url:
-#       defaultZone: http://localhost:8761/eureka/
-
-# Actuator All Endpoints
 management:
   endpoints:
     web:
@@ -39,5 +47,6 @@ management:
 logging:
   level:
     org.springframework.security: DEBUG
-    hibernate.sql: DEBUG
+    hibernate:
+      sql: DEBUG
     com.example.securitydemo: DEBUG
