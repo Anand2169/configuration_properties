@@ -17,6 +17,8 @@ spring:
   cache:
     redis:
       time-to-live: 3600 # TTL in seconds
+      key-serializer: org.springframework.data.redis.serializer.StringRedisSerializer
+      value-serializer: org.springframework.data.redis.serializer.GenericJackson2JsonRedisSerializer
 
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
