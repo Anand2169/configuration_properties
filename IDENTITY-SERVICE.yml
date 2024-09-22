@@ -6,7 +6,7 @@ spring:
     host: localhost            # Redis server host
     port: 6379                 # Redis server port
     password: yourPassword     # (Optional) Password if your Redis is secured
-    timeout: 2000ms            # Connection timeout in milliseconds
+    timeout: 2000              # Connection timeout in milliseconds
     lettuce:
       pool:
         max-active: 8          # Max active connections
